@@ -9,7 +9,7 @@ public class Service {
 	
 	public void addAccount(Account account) {
 		if(accountMap.containsKey(account.getAccountNumber())){
-			System.out.println("Account already exsits");
+			System.out.println("Account already exists");
 		}
 		else {
 			accountMap.put(account.getAccountNumber(),account);
@@ -26,7 +26,7 @@ public class Service {
 			accountMap.remove(account.getAccountNumber());
 		}
 		else {
-			System.out.println("This account does not exsit");
+			System.out.println("This account does not exists");
 		}
 	}
 	public HashMap<Integer, Account> getAccountMap(){

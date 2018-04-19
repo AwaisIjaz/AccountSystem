@@ -23,8 +23,8 @@ public class AccountManagementSystemTest {
 
 	@Test
 	public void addAccountTest() {
-		Account Ryan = new Account("Ryan","Prince",1);
-		service.addAccount(Ryan);
+		Account Awais = new Account("Awais","Ijaz",1);
+		service.addAccount(Awais);
 		Integer expected=1;
 		Integer actual=service.getAccountMap().size();
 		assertEquals(expected,actual);
@@ -32,9 +32,9 @@ public class AccountManagementSystemTest {
 	
 	@Test
 	public void removeAccountTest() {
-		Account Ryan = new Account("Ryan","Prince",1);
+		Account Awais = new Account("Awais","Ijaz",1);
 		Account Godwin = new Account("Godwin","Adeleke",2);
-		service.addAccount(Ryan);
+		service.addAccount(Awais);
 		service.addAccount(Godwin);
 		service.removeAccount(Godwin);
 		Integer expected=1;
@@ -48,11 +48,11 @@ public class AccountManagementSystemTest {
 	
 	@Test
 	public void getAccountTest() {
-		Account Ryan = new Account("Ryan","Prince",1);
+		Account Awais = new Account("Awais","Ijaz",1);
 		Account Godwin = new Account("Godwin","Adeleke",2);
-		service.addAccount(Ryan);
+		service.addAccount(Awais);
 		service.addAccount(Godwin);
-		Account expected = Ryan;
+		Account expected = Awais;
 		Account actual = service.getAccount(1);
 		assertEquals(expected,actual);
 		
@@ -60,10 +60,10 @@ public class AccountManagementSystemTest {
 	}
 	@Test
 	public void JSONconversionTest() {
-		Account Ryan = new Account("Ryan","Prince",1);
-		service.addAccount(Ryan);
+		Account Awais = new Account("Awais","Ijaz",1);
+		service.addAccount(Awais);
 		JSONUtil ju=new JSONUtil();
-		String expected="{\"1\":{\"firstName\":\"Ryan\",\"lastName\":\"Prince\",\"accountNumber\":1}}";
+		String expected="{\"1\":{\"firstName\":\"Awais\",\"lastName\":\"Ijaz\",\"accountNumber\":1}}";
 		String actual=ju.getJSONForObject(service.getAccountMap());
 		System.out.println(ju.getJSONForObject(service.getAccountMap()));
 		assertEquals(expected,actual);
