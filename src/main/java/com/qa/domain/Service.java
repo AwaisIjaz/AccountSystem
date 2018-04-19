@@ -2,14 +2,13 @@ package com.qa.domain;
 
 import java.util.HashMap;
  
-
 public class Service {
 
 	private HashMap<Integer,Account> accountMap  = new HashMap<Integer, Account>();
 	
 	public void addAccount(Account account) {
 		if(accountMap.containsKey(account.getAccountNumber())){
-			System.out.println("Account already exists");
+			System.out.println("Account already exist");
 		}
 		else {
 			accountMap.put(account.getAccountNumber(),account);
@@ -26,7 +25,7 @@ public class Service {
 			accountMap.remove(account.getAccountNumber());
 		}
 		else {
-			System.out.println("This account does not exists");
+			System.out.println("This account does not exist");
 		}
 	}
 	public HashMap<Integer, Account> getAccountMap(){

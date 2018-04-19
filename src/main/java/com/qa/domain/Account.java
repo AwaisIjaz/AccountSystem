@@ -10,8 +10,6 @@ public class Account {
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.accountNumber = accountNumber;
-		
-		
 	}
 
 	public Integer getAccountNumber() {
