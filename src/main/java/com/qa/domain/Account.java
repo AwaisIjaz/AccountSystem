@@ -18,6 +18,11 @@ public class Account {
 		
 		return accountNumber;
 	}
+
+	public String getFirstName() {
+		// TODO Auto-generated method stub
+		return firstName;
+	}
 	
 	
 }
