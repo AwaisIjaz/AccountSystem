@@ -9,7 +9,7 @@ public class Service {
 	
 	public void addAccount(Account account) {
 		if(accountMap.containsKey(account.getAccountNumber())){
-			System.out.println("Account already exsits");
+			System.out.println("Account already exists");
 		}
 		else {
 			accountMap.put(account.getAccountNumber(),account);
@@ -26,17 +26,26 @@ public class Service {
 			accountMap.remove(account.getAccountNumber());
 		}
 		else {
-			System.out.println("This account does not exsit");
+			System.out.println("This account does not exist");
 		}
 	}
 	public HashMap<Integer, Account> getAccountMap(){
 		return accountMap;
 	}
 	
-	public int getfirstnameDuplicate(String name) {
+	public int getfirstnameDuplicate(String firstname) {
 		int count = 0;
 		for(Account account: accountMap.values()) {
-			if(account.getFirstName().equals(name)) {
+			if(account.getFirstName().equals(firstname)) {
+				++count;
+			}
+		}
+		return count; 	
+}
+	public int getlastnameDuplicate(String lastname) {
+		int count = 0;
+		for(Account account: accountMap.values()) {
+			if(account.getLastName().equals(lastname)) {
 				++count;
 			}
 		}

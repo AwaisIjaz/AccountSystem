@@ -10,8 +10,7 @@ public class Account {
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.accountNumber = accountNumber;
-		
-		
+	
 	}
 
 	public Integer getAccountNumber() {
@@ -22,6 +21,11 @@ public class Account {
 	public String getFirstName() {
 		// TODO Auto-generated method stub
 		return firstName;
+	}
+	
+	public String getLastName() {
+		// TODO Auto-generated method stub
+		return lastName;
 	}
 	
 	
